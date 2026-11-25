@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verisk Touchstone V12 vs V13 — ArcGIS County EP Comparison</title>
+
+  <!-- ArcGIS Maps SDK for JavaScript 4.30 -->
+  <link rel="stylesheet" href="https://js.arcgis.com/4.30/esri/themes/dark/main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <script src="https://js.arcgis.com/4.30/"></script>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- Top Header & Controls -->
+  <header class="app-header">
+    <div class="brand">
+      <span class="badge">ArcGIS Living Atlas</span>
+      <h1>Touchstone ILC Model Comparison: <span id="versionTitle">V12 vs V13</span></h1>
+      <span id="statusText" class="status-pill">Initialising map...</span>
+    </div>
+
+    <div class="controls-bar">
+      <div class="control-group">
+        <label for="perilSelect">Model / Peril</label>
+        <select id="perilSelect"></select>
+      </div>
+
+      <div class="control-group">
+        <label for="lobSelect">Line of Business</label>
+        <select id="lobSelect"></select>
+      </div>
+
+      <div class="control-group">
+        <label for="metricSelect">Metric / Curve</label>
+        <select id="metricSelect">
+          <option value="AAL">AAL (Average Annual Loss)</option>
+          <option value="OEP" selected>OEP (Occurrence EP)</option>
+          <option value="AEP">AEP (Aggregate EP)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="rpSelect">Return Period</label>
+        <select id="rpSelect"></select>
+      </div>
+
+      <div class="control-group">
+        <label for="modeSelect">Display Mode</label>
+        <select id="modeSelect">
+          <option value="pct_diff" selected>% Change (V13 vs V12)</option>
+          <option value="abs_diff">$ Change (V13 − V12)</option>
+          <option value="new">V13 Loss ($)</option>
+          <option value="old">V12 Loss ($)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <label for="stateFilter">Filter State</label>
+        <select id="stateFilter">
+          <option value="ALL">All US States</option>
+        </select>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Workspace -->
+  <main class="workspace">
+    <!-- ArcGIS Map Canvas -->
+    <section class="map-container">
+      <div id="viewDiv"></div>
+
+      <!-- Custom Floating Legend -->
+      <div id="legendCard" class="legend-card">
+        <div class="legend-title" id="legendTitle">% Change (V13 vs V12)</div>
+        <div class="legend-bar" id="legendBar"></div>
+        <div class="legend-labels" id="legendLabels">
+          <span>-50%</span>
+          <span>0%</span>
+          <span>+50%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Right Analytics Sidebar -->
+    <aside class="sidebar">
+      <!-- Portfolio / Slice KPIs -->
+      <div class="panel kpi-panel">
+        <div class="panel-header">
+          <h2 id="sliceSummaryTitle">Selection Summary</h2>
+          <span id="countyCountBadge" class="meta-tag">0 counties</span>
+        </div>
+        <div class="kpi-grid">
+          <div class="kpi-box">
+            <span class="kpi-label" id="kpiOldLabel">V12 Total (AAL)</span>
+            <strong class="kpi-value" id="kpiOldVal">—</strong>
+          </div>
+          <div class="kpi-box">
+            <span class="kpi-label" id="kpiNewLabel">V13 Total (AAL)</span>
+            <strong class="kpi-value" id="kpiNewVal">—</strong>
+          </div>
+          <div class="kpi-box">
+            <span class="kpi-label">Net $ Change</span>
+            <strong class="kpi-value" id="kpiDiffVal">—</strong>
+          </div>
+          <div class="kpi-box">
+            <span class="kpi-label">Net % Change</span>
+            <strong class="kpi-value" id="kpiPctVal">—</strong>
+          </div>
+        </div>
+        <p class="kpi-note" id="kpiNote">
+          Note: Totals shown are additive AAL across active counties. Click any county on the map to inspect its full OEP &amp; AEP return-period curves.
+        </p>
+      </div>
+
+      <!-- Selected County Inspector & EP Curve Chart -->
+      <div class="panel inspector-panel">
+        <div class="panel-header">
+          <h2 id="countyTitle">Click a County to Inspect</h2>
+          <span id="countyFipsBadge" class="meta-tag">FIPS —</span>
+        </div>
+
+        <div id="countyMetrics" class="county-metrics hidden">
+          <div class="metric-row">
+            <span>Selected Metric (<strong id="inspMetricLabel">OEP 100yr</strong>):</span>
+            <span id="inspMetricComparison"></span>
+          </div>
+          <div class="metric-row">
+            <span>AAL (V12 → V13):</span>
+            <span id="inspAalComparison"></span>
+          </div>
+        </div>
+
+        <div class="chart-wrapper">
+          <canvas id="epChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Top County Movers Table -->
+      <div class="panel table-panel">
+        <div class="panel-header">
+          <h2>Top County Movers</h2>
+          <input type="search" id="countySearch" placeholder="Search county or FIPS..." />
+        </div>
+        <div class="table-scroll">
+          <table id="moversTable">
+            <thead>
+              <tr>
+                <th>County</th>
+                <th class="num">V12</th>
+                <th class="num">V13</th>
+                <th class="num">Diff</th>
+                <th class="num">%</th>
+              </tr>
+            </thead>
+            <tbody id="moversBody"></tbody>
+          </table>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

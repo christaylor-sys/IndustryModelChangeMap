@@ -1,0 +1,10 @@
+data/raw/
+data/processed/
+web/data/
+__pycache__/
+*.pyc
+.pytest_cache/
+CountryLevelModelView/
+*.csv
+__pychache__/
+.DS_Store
