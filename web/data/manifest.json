@@ -1,0 +1,535 @@
+{
+  "generated_utc": "2026-11-24T16:11:36+00:00",
+  "source": "DataPull_2026-11-24-1203.csv",
+  "versions": {
+    "old": "V12",
+    "new": "V13"
+  },
+  "return_periods": [
+    10,
+    25,
+    50,
+    100,
+    200,
+    250,
+    500,
+    1000
+  ],
+  "layout": [
+    "V12_AAL",
+    "V13_AAL",
+    "V12_OEP_10",
+    "V12_OEP_25",
+    "V12_OEP_50",
+    "V12_OEP_100",
+    "V12_OEP_200",
+    "V12_OEP_250",
+    "V12_OEP_500",
+    "V12_OEP_1000",
+    "V13_OEP_10",
+    "V13_OEP_25",
+    "V13_OEP_50",
+    "V13_OEP_100",
+    "V13_OEP_200",
+    "V13_OEP_250",
+    "V13_OEP_500",
+    "V13_OEP_1000",
+    "V12_AEP_10",
+    "V12_AEP_25",
+    "V12_AEP_50",
+    "V12_AEP_100",
+    "V12_AEP_200",
+    "V12_AEP_250",
+    "V12_AEP_500",
+    "V12_AEP_1000",
+    "V13_AEP_10",
+    "V13_AEP_25",
+    "V13_AEP_50",
+    "V13_AEP_100",
+    "V13_AEP_200",
+    "V13_AEP_250",
+    "V13_AEP_500",
+    "V13_AEP_1000"
+  ],
+  "gzip": true,
+  "all_code": "ALL",
+  "slices": [
+    {
+      "model_code": "11",
+      "model_name": "EQ Model for the U.S. and Canada",
+      "peril": "NAEQ",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/11_NAEQ_2.json.gz",
+      "counties": 3032
+    },
+    {
+      "model_code": "11",
+      "model_name": "EQ Model for the U.S. and Canada",
+      "peril": "NAEQ",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/11_NAEQ_3.json.gz",
+      "counties": 3024
+    },
+    {
+      "model_code": "11",
+      "model_name": "EQ Model for the U.S. and Canada",
+      "peril": "NAEQ",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/11_NAEQ_4.json.gz",
+      "counties": 2932
+    },
+    {
+      "model_code": "11",
+      "model_name": "EQ Model for the U.S. and Canada",
+      "peril": "NAEQ",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/11_NAEQ_5.json.gz",
+      "counties": 2992
+    },
+    {
+      "model_code": "11",
+      "model_name": "EQ Model for the U.S. and Canada",
+      "peril": "NAEQ",
+      "lob_code": "84",
+      "lob_description": "",
+      "file": "slices/11_NAEQ_84.json.gz",
+      "counties": 3006
+    },
+    {
+      "model_code": "11",
+      "model_name": "EQ Model for the U.S. and Canada",
+      "peril": "NAEQ",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/11_NAEQ_ALL.json.gz",
+      "counties": 3035
+    },
+    {
+      "model_code": "13",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/13_USEQ_2.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "13",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/13_USEQ_3.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "13",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/13_USEQ_4.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "13",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/13_USEQ_5.json.gz",
+      "counties": 4
+    },
+    {
+      "model_code": "13",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "84",
+      "lob_description": "",
+      "file": "slices/13_USEQ_84.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "13",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/13_USEQ_ALL.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "14",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/14_USEQ_2.json.gz",
+      "counties": 29
+    },
+    {
+      "model_code": "14",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/14_USEQ_3.json.gz",
+      "counties": 29
+    },
+    {
+      "model_code": "14",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/14_USEQ_4.json.gz",
+      "counties": 29
+    },
+    {
+      "model_code": "14",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/14_USEQ_5.json.gz",
+      "counties": 29
+    },
+    {
+      "model_code": "14",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "84",
+      "lob_description": "",
+      "file": "slices/14_USEQ_84.json.gz",
+      "counties": 29
+    },
+    {
+      "model_code": "14",
+      "model_name": "EQ Model for Alaska+Hawaii",
+      "peril": "USEQ",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/14_USEQ_ALL.json.gz",
+      "counties": 29
+    },
+    {
+      "model_code": "22",
+      "model_name": "Severe Thunderstorm Model for the U.S. and Canada",
+      "peril": "NACS",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/22_NACS_2.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "22",
+      "model_name": "Severe Thunderstorm Model for the U.S. and Canada",
+      "peril": "NACS",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/22_NACS_3.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "22",
+      "model_name": "Severe Thunderstorm Model for the U.S. and Canada",
+      "peril": "NACS",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/22_NACS_4.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "22",
+      "model_name": "Severe Thunderstorm Model for the U.S. and Canada",
+      "peril": "NACS",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/22_NACS_5.json.gz",
+      "counties": 3098
+    },
+    {
+      "model_code": "22",
+      "model_name": "Severe Thunderstorm Model for the U.S. and Canada",
+      "peril": "NACS",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/22_NACS_ALL.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "23",
+      "model_name": "Hurricane Model for US+Hawaii",
+      "peril": "USWS",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/23_USWS_2.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "23",
+      "model_name": "Hurricane Model for US+Hawaii",
+      "peril": "USWS",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/23_USWS_3.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "23",
+      "model_name": "Hurricane Model for US+Hawaii",
+      "peril": "USWS",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/23_USWS_4.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "23",
+      "model_name": "Hurricane Model for US+Hawaii",
+      "peril": "USWS",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/23_USWS_5.json.gz",
+      "counties": 4
+    },
+    {
+      "model_code": "23",
+      "model_name": "Hurricane Model for US+Hawaii",
+      "peril": "USWS",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/23_USWS_ALL.json.gz",
+      "counties": 5
+    },
+    {
+      "model_code": "27",
+      "model_name": "North Atlantic Basinwide Hurricane Model",
+      "peril": "NAWS",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/27_NAWS_2.json.gz",
+      "counties": 2029
+    },
+    {
+      "model_code": "27",
+      "model_name": "North Atlantic Basinwide Hurricane Model",
+      "peril": "NAWS",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/27_NAWS_3.json.gz",
+      "counties": 2029
+    },
+    {
+      "model_code": "27",
+      "model_name": "North Atlantic Basinwide Hurricane Model",
+      "peril": "NAWS",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/27_NAWS_4.json.gz",
+      "counties": 2029
+    },
+    {
+      "model_code": "27",
+      "model_name": "North Atlantic Basinwide Hurricane Model",
+      "peril": "NAWS",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/27_NAWS_5.json.gz",
+      "counties": 2026
+    },
+    {
+      "model_code": "27",
+      "model_name": "North Atlantic Basinwide Hurricane Model",
+      "peril": "NAWS",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/27_NAWS_ALL.json.gz",
+      "counties": 2029
+    },
+    {
+      "model_code": "28",
+      "model_name": "Winter Storm Model for the U.S.",
+      "peril": "USWT",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/28_USWT_2.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "28",
+      "model_name": "Winter Storm Model for the U.S.",
+      "peril": "USWT",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/28_USWT_3.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "28",
+      "model_name": "Winter Storm Model for the U.S.",
+      "peril": "USWT",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/28_USWT_4.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "28",
+      "model_name": "Winter Storm Model for the U.S.",
+      "peril": "USWT",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/28_USWT_5.json.gz",
+      "counties": 3098
+    },
+    {
+      "model_code": "28",
+      "model_name": "Winter Storm Model for the U.S.",
+      "peril": "USWT",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/28_USWT_ALL.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "5",
+      "model_name": "Wildfire Model for the U.S.",
+      "peril": "USWF",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/5_USWF_2.json.gz",
+      "counties": 742
+    },
+    {
+      "model_code": "5",
+      "model_name": "Wildfire Model for the U.S.",
+      "peril": "USWF",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/5_USWF_3.json.gz",
+      "counties": 742
+    },
+    {
+      "model_code": "5",
+      "model_name": "Wildfire Model for the U.S.",
+      "peril": "USWF",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/5_USWF_4.json.gz",
+      "counties": 741
+    },
+    {
+      "model_code": "5",
+      "model_name": "Wildfire Model for the U.S.",
+      "peril": "USWF",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/5_USWF_5.json.gz",
+      "counties": 742
+    },
+    {
+      "model_code": "5",
+      "model_name": "Wildfire Model for the U.S.",
+      "peril": "USWF",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/5_USWF_ALL.json.gz",
+      "counties": 742
+    },
+    {
+      "model_code": "8",
+      "model_name": "Inland Flood Model for the U.S.",
+      "peril": "USFL",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/8_USFL_2.json.gz",
+      "counties": 3059
+    },
+    {
+      "model_code": "8",
+      "model_name": "Inland Flood Model for the U.S.",
+      "peril": "USFL",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/8_USFL_3.json.gz",
+      "counties": 3100
+    },
+    {
+      "model_code": "8",
+      "model_name": "Inland Flood Model for the U.S.",
+      "peril": "USFL",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/8_USFL_4.json.gz",
+      "counties": 3100
+    },
+    {
+      "model_code": "8",
+      "model_name": "Inland Flood Model for the U.S.",
+      "peril": "USFL",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/8_USFL_ALL.json.gz",
+      "counties": 3101
+    },
+    {
+      "model_code": "ALL",
+      "model_name": "All Models / Perils",
+      "peril": "ALL",
+      "lob_code": "2",
+      "lob_description": "Residential",
+      "file": "slices/ALL_ALL_2.json.gz",
+      "counties": 3135
+    },
+    {
+      "model_code": "ALL",
+      "model_name": "All Models / Perils",
+      "peril": "ALL",
+      "lob_code": "3",
+      "lob_description": "Commercial",
+      "file": "slices/ALL_ALL_3.json.gz",
+      "counties": 3135
+    },
+    {
+      "model_code": "ALL",
+      "model_name": "All Models / Perils",
+      "peril": "ALL",
+      "lob_code": "4",
+      "lob_description": "Auto",
+      "file": "slices/ALL_ALL_4.json.gz",
+      "counties": 3135
+    },
+    {
+      "model_code": "ALL",
+      "model_name": "All Models / Perils",
+      "peril": "ALL",
+      "lob_code": "5",
+      "lob_description": "Mobile Homes",
+      "file": "slices/ALL_ALL_5.json.gz",
+      "counties": 3131
+    },
+    {
+      "model_code": "ALL",
+      "model_name": "All Models / Perils",
+      "peril": "ALL",
+      "lob_code": "84",
+      "lob_description": "",
+      "file": "slices/ALL_ALL_84.json.gz",
+      "counties": 3040
+    },
+    {
+      "model_code": "ALL",
+      "model_name": "All Models / Perils",
+      "peril": "ALL",
+      "lob_code": "ALL",
+      "lob_description": "All LOBs",
+      "file": "slices/ALL_ALL_ALL.json.gz",
+      "counties": 3135
+    }
+  ]
+}
